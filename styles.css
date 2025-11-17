@@ -1,0 +1,17 @@
+body {
+  background-color: #23205c;
+  color: #87cefa;
+}
+
+h1 {
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.field {
+  background-color: #2e2f7c;
+  padding: 5px, 0, 5px, 0;
+  margin: 10px, 5px, 10px, 5px;
+}
