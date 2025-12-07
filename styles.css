@@ -15,7 +15,7 @@ h1 {
 h2 {
   font-family: "Josephine Sans", sans;
   font-weight: <weight>;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-style: normal;
 }
 
@@ -35,7 +35,28 @@ p {
   margin: 5px;
 }
 
-input[type=text] {
+textarea {
+  field-sizing: content;
+  appearance: none;
+  color: #87cefa;
+  background-color: #23205c;
+  border: none;
+  border-radius: 5px;
+  border-color: solid #ffff33;
+  resize: both;
+  height: 100px;
+  width: 90%;
+  font-size: 1.1rem;
+}
+
+textarea:focus {
+  appearance: none;
+  outline: none;
+  border: 2px dashed #ffff33;
+  font-size: 1.1rem;
+}
+
+input[type="text"] {
   appearance: none;
   color: #87cefa;
   background-color: #23205c;
@@ -43,15 +64,17 @@ input[type=text] {
   border-radius: 3px;
   border-color: solid #ffff33;
   width: 90%;
+  font-size: 1.1rem;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   appearance: none;
   outline: none;
-  border-bottom: 2px solid #ffff33;
+  border-bottom: 2px dashed #ffff33;
+  font-size: 1.1rem;
 }
 
-input[type=radio] {
+input[type="radio"] {
   appearance: none;
   width: 1rem;
   height: 1rem;
@@ -60,7 +83,7 @@ input[type=radio] {
   background-color: #23205c;
 }
 
-input[type=radio]:checked {
+input[type="radio"]:checked {
   background-color: #ffff33;
   border-color: 2px #ffd700;
 }
@@ -69,8 +92,28 @@ input[type=radio]:checked {
   display: none;
 }
 
+#ifSoRanHow {
+  display: none;
+}
+
+#whereAttendP {
+  display: none;
+}
+
+#whereAttendText {
+  display: none;
+}
+
+#whatHarmP {
+  display: none;
+}
+
+#whatHarmText {
+  display: none;
+}
+
 button {
-  margin-top:20px;
+  margin-top: 20px;
   border: none;
   border-radius: 5px;
   color: #23205c;

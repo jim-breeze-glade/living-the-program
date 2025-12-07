@@ -1,88 +1,341 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>I'm Jim</title>
+    <title>Living the Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
-    <link rel="icon" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"
+    <link rel="icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>I'm Jim, and I'm an addict</h1>
+    <h1>Living the Program</h1>
     <div class="form-container">
-      <h2>Living the Program - Daily Form</h2>
+      <h2>A Daily Inventory</h2>
       <form id="living">
         <div class="field">
-          <h2 class="jft"><strong><i>Just for today,</i> my thoughts will be on my recovery, living and enjoying life without the use of drugs.</strong></h2>
-          
+          <h2 class="jft">
+            <strong
+              ><i>Just for today,</i> my thoughts will be on my recovery, living
+              and enjoying life without the use of drugs.</strong
+            >
+          </h2>
+
           <p>Am I clean today?</p>
-          <input type="radio" name="cleanToday" value="yes">
+          <input type="radio" name="cleanToday" value="yes" />
           <label for="yes">Yes</label>
-          <input type="radio" name="cleanToday" value="no">
+          <input type="radio" name="cleanToday" value="no" />
           <label for="no">No</label>
-          
+
           <p>How have I acted differently?</p>
-          <input type="text" name="actedDifferently">
-          
+          <input type="text" name="actedDifferently" />
+
           <p>Did my disease run my life today?</p>
-          <input type="radio" id="ifSoRanYes" name="runMyLife" value="yes" onclick="toggleTextBox()">
+          <input
+            type="radio"
+            id="ifSoRanYes"
+            name="runMyLife"
+            value="yes"
+            onclick="toggleRan()"
+          />
           <label for="yes">Yes</label>
-          <input type="radio" id="ifSoRanNo" name="runMyLife" value="no" onclick="toggleTextBox()">
+          <input
+            type="radio"
+            id="ifSoRanNo"
+            name="runMyLife"
+            value="no"
+            onclick="toggleRan()"
+          />
           <label for="no">No</label>
-          <input type="text" id="ifSoRanText" name="howRan">
+          <br />
+          <p id="ifSoRanHow">How?</p>
+          <br />
+          <input type="text" id="ifSoRanText" name="howRan" />
 
           <p>What did I do today that I wish I had not done?</p>
-          <input type="text" name="wishIhadNot">
+          <input type="text" name="wishIhadNot" />
 
           <p>What have I left undone that I wish I had done?</p>
-          <input type="text" name="wishIhad">
+          <input type="text" name="wishIhad" />
 
-          <p>Was I good to myself today? How?</p>
-          <input type="radio" name="goodToMyself" value="yes">
+          <p>Was I good to myself today?</p>
+          <input type="radio" name="goodToMyself" value="yes" />
           <label for="yes">Yes</label>
-          <input type="radio" name="goodToMyself" value="no">
-          <label for="no">No</label><br>
-          <input style="margin-top: 10px;" type="text" name="howGoodToMyself">
+          <input type="radio" name="goodToMyself" value="no" />
+          <label for="no">No</label>
+          <br />
+          <p>How?</p>
+          <input type="text" name="howGoodToMyself" />
 
           <p>Was today a good day?</p>
-          <input type="radio" name="goodDay" value="yes">
+          <input type="radio" name="goodDay" value="yes" />
           <label for="yes">Yes</label>
-          <input type="radio" name="goodDay" value="no">
+          <input type="radio" name="goodDay" value="no" />
           <label for="no">No</label>
 
           <p>Was I happy?</p>
-          <input type="radio" name="happy" value="yes">
+          <input type="radio" name="happy" value="yes" />
           <label for="yes">Yes</label>
-          <input type="radio" name="happy" value="no">
+          <input type="radio" name="happy" value="no" />
           <label for="no">No</label>
 
           <p>Was I serene?</p>
-          <input type="radio" name="serene" value="yes">
+          <input type="radio" name="serene" value="yes" />
           <label for="yes">Yes</label>
-          <input type="radio" name="serene" value="no">
+          <input type="radio" name="serene" value="no" />
+          <label for="no">No</label>
+        </div>
+        <div class="field">
+          <h2 class="jft">
+            <strong
+              ><i>Just for today,</i> I will have faith in someone in NA who
+              belives in me and wants to help me in my recovery.</strong
+            >
+          </h2>
+
+          <p>Did I talk to my sponsor today?</p>
+          <input type="radio" name="talkToSponsor" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="talkToSponsor" value="no" />
           <label for="no">No</label>
 
-        </div>
-        <div class="field">
-          <h2 class="jft"><strong><i>Just for today,</i> I will have faith in someone in NA who belives in me and wants to help me in my recovery.</strong></h2>
-        </div>
-        <div class="field">
-          <h2 class="jft"><strong><i>Just for today,</i> I will have a program. I will try to follow it to the best of my ability.</strong></h2>
-        </div>
-        <div class="field">
-          <p class="jft"><strong><i>Just for today,</i> through NA, I will try to get a better perspective on my life.</strong></p>
-          <p>Did I feel like I was a part of humanity today?</p>
-          <input type="radio" name="partOfHumanity" value="yes">
+          <p>Did I attend a meeting today?</p>
+          <input
+            type="radio"
+            id="whereAttendYes"
+            name="attendMeeting"
+            value="yes"
+            onclick="toggleWhereAttend()"
+          />
           <label for="yes">Yes</label>
-          <input type="radio" name="partOfHumanity" value="no">
+          <input
+            type="radio"
+            id="whereAttendNo"
+            name="attendMeeting"
+            value="no"
+            onclick="toggleWhereAttend()"
+          />
+          <label for="no">No</label>
+          <br />
+          <p id="whereAttendP">Where?</p>
+          <br />
+          <input type="text" id="whereAttendText" name="whereAttend" />
+
+          <p>Did I share my experiences, strengths, and hopes?</p>
+          <input type="radio" name="share" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="share" value="no" />
+          <label for="no">No</label>
+
+          <p>Who are the people in my life that I trust today?</p>
+          <input type="text" name="peopleITrust" />
+
+          <p>Who has trust in me today?</p>
+          <input type="text" name="trustMe" />
+        </div>
+        <div class="field">
+          <h2 class="jft">
+            <strong
+              ><i>Just for today,</i> I will have a program. I will try to
+              follow it to the best of my ability.</strong
+            >
+          </h2>
+          <p>Did I read from our literature today?</p>
+          <input type="radio" name="read" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="read" value="no" />
+          <label for="no">No</label>
+
+          <p>What steps did I consciously work?</p>
+          <input type="text" name="stepsWorked" />
+
+          <p>Did I admit my powerlessness today?</p>
+          <input type="radio" name="admit" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="admit" value="no" />
+          <label for="no">No</label>
+
+          <p>Was I able to put my trust in my Higher Power today?</p>
+          <input type="radio" name="higherPower" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="higherPower" value="no" />
+          <label for="no">No</label>
+
+          <p>What did I learn about myself today?</p>
+          <input type="text" name="learnAboutMyself" />
+
+          <p>Did I make any amends today?</p>
+          <input type="radio" name="makeAmends" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="makeAmends" value="no" />
+          <label for="no">No</label>
+
+          <p>Do I owe any?</p>
+          <input type="radio" name="oweAmends" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="oweAmends" value="no" />
+          <label for="no">No</label>
+
+          <p>Did I admit fault to anyone today?</p>
+          <input type="radio" name="admitFault" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="admitFault" value="no" />
+          <label for="no">No</label>
+
+          <p>Did I worry about yesterday or tomorrow?</p>
+          <input type="radio" name="worry" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="worry" value="no" />
+          <label for="no">No</label>
+
+          <p>Can I accept myself as I am today?</p>
+          <input type="radio" name="acceptToday" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="acceptToday" value="no" />
           <label for="no">No</label>
         </div>
         <div class="field">
-          <h2 class="jft"><strong><i>Just for today,</i> I will be unafraid. My thoughts will be on my new associations, people who are not using and have found a new way of life. So long as I follow that way, I have nothing to fear.</strong></h2>
+          <p class="jft">
+            <strong
+              ><i>Just for today,</i> through NA, I will try to get a better
+              perspective on my life.</strong
+            >
+          </p>
+          <p>Did I feel like I was a part of humanity today?</p>
+          <input type="radio" name="partOfHumanity" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="partOfHumanity" value="no" />
+          <label for="no">No</label>
+
+          <p>Did I allow myself to become obsessed by anything today?</p>
+          <input type="radio" name="becomeObsessed" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="becomeObsessed" value="no" />
+          <label for="no">No</label>
+
+          <p>What has God given me to be grateful for today?</p>
+          <input type="text" name="gratefulFor" />
+
+          <p>
+            Have I done anything to cause harm to myself or to another today?
+          </p>
+          <input
+            type="radio"
+            id="causeHarmYes"
+            name="causeHarm"
+            value="yes"
+            onclick="toggleWhatHarm()"
+          />
+          <label for="yes">Yes</label>
+          <input
+            type="radio"
+            id="causeHarmNo"
+            name="causeHarm"
+            value="no"
+            onclick="toggleWhatHarm()"
+          />
+          <label for="no">No</label>
+          <br />
+          <p id="whatHarmP">What?</p>
+          <br />
+          <input type="text" id="whatHarmText" name="whatHarm" />
+
+          <p>Am I willing to change today?</p>
+          <input type="radio" name="willingToChange" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="willingToChange" value="no" />
+          <label for="no">No</label>
+
+          <p>Did I pray or meditate today?</p>
+          <input type="radio" name="prayToday" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="prayToday" value="no" />
+          <label for="no">No</label>
+
+          <p>How did this affect my life?</p>
+          <input type="text" name="affectMyLife" />
+
+          <p>
+            What spiritual principles have I been able to practice in my life
+            today?
+          </p>
+          <input type="text" name="spiritualPrinciples" />
+
+          <p>Was the most important thing in my life today staying clean?</p>
+          <input type="radio" name="importantThing" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="importantThing" value="no" />
+          <label for="no">No</label>
+        </div>
+        <div class="field">
+          <h2 class="jft">
+            <strong
+              ><i>Just for today,</i> I will be unafraid. My thoughts will be on
+              my new associations, people who are not using and have found a new
+              way of life. So long as I follow that way, I have nothing to
+              fear.</strong
+            >
+          </h2>
+
+          <p>
+            Have I given of myself today without expecting anything in return?
+          </p>
+          <input type="radio" name="givenMyself" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="givenMyself" value="no" />
+          <label for="no">No</label>
+
+          <p>Was there fear in my life today?</p>
+          <input type="radio" name="fearLife" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="fearLife" value="no" />
+          <label for="no">No</label>
+
+          <p>Did I feel intense joy or pain?</p>
+          <input type="radio" name="feelIntense" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="feelIntense" value="no" />
+          <label for="no">No</label>
+
+          <p>Did I call or visit someone in the program today?</p>
+          <input type="radio" name="visitSomeone" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="visitSomeone" value="no" />
+          <label for="no">No</label>
+
+          <p>Did I pray for the well-being of another today?</p>
+          <input type="radio" name="prayForAnother" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="prayForAnother" value="no" />
+          <label for="no">No</label>
+
+          <p>Was I happy today?</p>
+          <input type="radio" name="happyToday" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="happyToday" value="no" />
+          <label for="no">No</label>
+
+          <p>Have I been peaceful today?</p>
+          <input type="radio" name="peacefulToday" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="peacefulToday" value="no" />
+          <label for="no">No</label>
+
+          <p>Did I consciously remember that I have a choice today?</p>
+          <input type="radio" name="rememberChoice" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="rememberChoice" value="no" />
+          <label for="no">No</label>
+        </div>
+        <div class="field">
+          <h2>Notes</h2>
+          <textarea name="notes"></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
@@ -92,4 +345,3 @@
     </div>
   </body>
 </html>
-
