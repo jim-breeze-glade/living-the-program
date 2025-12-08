@@ -5,8 +5,6 @@ document.getElementById("living").addEventListener("submit", function (e) {
   const entry = {};
   formData.forEach((value, key) => {
     entry[key] = value;
-    console.log(key);
-    console.log(value);
   });
 
   entry.timestamp = new Date().toISOString();
@@ -71,10 +69,20 @@ function displayEntries() {
   const container = document.getElementById("entriesContainer");
 
   container.innerHTML = "";
+  if (viewBtn.textContent === "View Entries") {
+    viewBtn.textContent = "View Inventory";
+    living.style.display = "none";
+    entriesContainer.style.display = "inline-block";
+    pageHeader.textContent = "History";
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
 
-  [...entries].reverse().forEach((entry) => {
-    const entryDiv = document.createElement("div");
-    entryDiv.innerHTML = `
+    [...entries].reverse().forEach((entry) => {
+      const entryDiv = document.createElement("div");
+      entryDiv.innerHTML = `
       <h3>${entry.date}</h3>
       <p><strong>Am I clean today?</strong> ${entry.cleanToday}</p>
       <p><strong>How have I acted differently?</strong> ${entry.actedDifferently}</p>
@@ -125,8 +133,12 @@ function displayEntries() {
       
       <hr>
     `;
-    container.appendChild(entryDiv);
-  });
+      container.appendChild(entryDiv);
+    });
+  } else if (viewBtn.textContent === "View Inventory") {
+    viewBtn.textContent = "View Entries";
+    living.style.display = "inline-block";
+    entriesContainer.style.display = "none";
+    pageHeader.textContent = "A Daily Inventory";
+  }
 }
-
-displayEntries();

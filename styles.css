@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Josephine Sans", sans;
+  font-family: "Josephine Sans", sans-serif;
   font-weight: <weight>;
   font-size: 1.3rem;
   font-style: normal;
@@ -21,6 +21,13 @@ h2 {
 
 p {
   color: #ffff33;
+}
+
+footer {
+  padding: 1rem 1.25rem;
+  font-family: "Josephine Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #87cefa;
 }
 
 .jft {
@@ -87,7 +94,9 @@ input[type="radio"]:checked {
   background-color: #ffff33;
   border-color: 2px #ffd700;
 }
-
+#living {
+  display: inline-block;
+}
 #ifSoRanText {
   display: none;
 }

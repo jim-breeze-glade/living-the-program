@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <button id="viewBtn">View Entries</button>
     <h1>Living the Program</h1>
     <div class="form-container">
-      <h2>A Daily Inventory</h2>
+      <h2 id="pageHeader">A Daily Inventory</h2>
       <form id="living">
         <div class="field">
           <h2 class="jft">
@@ -340,8 +341,54 @@
         <button type="submit">Submit</button>
       </form>
       <div id="entriesContainer"></div>
-      <button id="viewBtn">View Entries</button>
       <script src="function.js"></script>
     </div>
   </body>
+
+  <footer role="contentinfo" aria-label="Site footer">
+    <div
+      style="
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: space-between;
+      "
+    >
+      <div>
+        <p style="margin: 0 0 0.25rem 0">
+          <strong>Disclaimer:</strong> The "NA" symbol belongs to Narcotics
+          Anonymous.
+        </p>
+        <p style="margin: 0; font-size: 0.85rem; color: #87cefa">
+          This site is unofficial and is not affiliated with or endorsed by
+          Narcotics Anonymous.
+        </p>
+      </div>
+
+      <div style="text-align: right; min-width: 220px">
+        <p style="margin: 0 0 0.25rem 0">
+          Site maintained by
+          <a
+            href="mailto:jimh.sprh@gmail.com"
+            style="color: #87cefa; text-decoration: underline"
+            >jimh.sprh@gmail.com</a
+          >
+        </p>
+        <p style="margin: 0; font-size: 0.8rem; color: #076eae">
+          &copy; <span id="year"></span> Jim H
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Insert current year automatically
+      (function () {
+        var y = new Date().getFullYear();
+        document.getElementById("year").textContent = y;
+      })();
+    </script>
+  </footer>
 </html>
