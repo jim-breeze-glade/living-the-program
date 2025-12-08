@@ -1,33 +1,62 @@
 body {
-  font-family: "Josephine Sans", sans;
+  font-family: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   background-color: #23205c;
   color: #87cefa;
 }
 
 h1 {
-  font-family: "Libre Bodoni", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-family:
+    "Libre Bodoni", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text",
+    Garamond, "Times New Roman", serif;
+  font-weight: 700;
   font-style: normal;
 }
 
 h2 {
-  font-family: "Josephine Sans", sans-serif;
-  font-weight: <weight>;
-  font-size: 1.3rem;
+  font-family: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
   font-style: normal;
+  text-align: center;
+}
+
+h3 {
+  font-family:
+    "Libre Bodoni", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text",
+    Garamond, "Times New Roman", serif;
 }
 
 p {
   color: #ffff33;
 }
 
+a {
+  color: #87cefa;
+  text-decoration: underline;
+}
+
 footer {
   padding: 1rem 1.25rem;
-  font-family: "Josephine Sans", sans-serif;
+  font-family: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.9rem;
   color: #87cefa;
+}
+
+button {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #403aa8;
+  background: linear-gradient(to bottom right, #ffff66, #ffd700);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: stretch;
+  align-items: stretch;
 }
 
 .jft {
@@ -97,6 +126,15 @@ input[type="radio"]:checked {
 #living {
   display: inline-block;
 }
+
+#entriesContainer {
+  display: none;
+}
+
+#about {
+  display: none;
+}
+
 #ifSoRanText {
   display: none;
 }
@@ -119,12 +157,4 @@ input[type="radio"]:checked {
 
 #whatHarmText {
   display: none;
-}
-
-button {
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  color: #23205c;
-  background-color: #ffff33;
 }

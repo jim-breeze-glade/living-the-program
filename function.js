@@ -62,27 +62,39 @@ function toggleWhatHarm() {
   }
 }
 
+document
+  .getElementById("inventoryBtn")
+  .addEventListener("click", displayInventory);
 document.getElementById("viewBtn").addEventListener("click", displayEntries);
+document.getElementById("aboutBtn").addEventListener("click", displayAbout);
+
+function displayInventory() {
+  entriesContainer.style.display = "none";
+  about.style.display = "none";
+  living.style.display = "inline-block";
+  pageHeader.textContent = "A Daily Inventory";
+}
+
+function displayAbout() {
+  entriesContainer.style.display = "none";
+  living.style.display = "none";
+  about.style.display = "inline-block";
+  pageHeader.textContent = "About this site";
+}
 
 function displayEntries() {
   const entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");
   const container = document.getElementById("entriesContainer");
 
   container.innerHTML = "";
-  if (viewBtn.textContent === "View Entries") {
-    viewBtn.textContent = "View Inventory";
-    living.style.display = "none";
-    entriesContainer.style.display = "inline-block";
-    pageHeader.textContent = "History";
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+  living.style.display = "none";
+  about.style.display = "none";
+  entriesContainer.style.display = "inline-block";
+  pageHeader.textContent = "History";
 
-    [...entries].reverse().forEach((entry) => {
-      const entryDiv = document.createElement("div");
-      entryDiv.innerHTML = `
+  [...entries].reverse().forEach((entry) => {
+    const entryDiv = document.createElement("div");
+    entryDiv.innerHTML = `
       <h3>${entry.date}</h3>
       <p><strong>Am I clean today?</strong> ${entry.cleanToday}</p>
       <p><strong>How have I acted differently?</strong> ${entry.actedDifferently}</p>
@@ -133,12 +145,6 @@ function displayEntries() {
       
       <hr>
     `;
-      container.appendChild(entryDiv);
-    });
-  } else if (viewBtn.textContent === "View Inventory") {
-    viewBtn.textContent = "View Entries";
-    living.style.display = "inline-block";
-    entriesContainer.style.display = "none";
-    pageHeader.textContent = "A Daily Inventory";
-  }
+    container.appendChild(entryDiv);
+  });
 }

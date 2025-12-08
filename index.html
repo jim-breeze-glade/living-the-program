@@ -5,6 +5,11 @@
     <title>Living the Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
+    <meta property="og:title" content="Living the Program" />
+    <meta property="og:description" content="Log your daily inventory in your browser." />
+    <meta property="og:image" content="https://www.pexels.com/photo/white-book-page-with-black-pen-942871/" />
+    <meta property="og:url" content="jim-breeze-glade.github.io/living-the-program" />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,18 +20,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button id="viewBtn">View Entries</button>
+    <div class="button-container">
+      <button id="inventoryBtn">Inventory</button>
+      <button id="viewBtn">History</button>
+      <button id="aboutBtn">About</button>
+    </div>
     <h1>Living the Program</h1>
     <div class="form-container">
       <h2 id="pageHeader">A Daily Inventory</h2>
       <form id="living">
         <div class="field">
-          <h2 class="jft">
+          <h3 class="jft">
             <strong
               ><i>Just for today,</i> my thoughts will be on my recovery, living
               and enjoying life without the use of drugs.</strong
             >
-          </h2>
+          </h3>
 
           <p>Am I clean today?</p>
           <input type="radio" name="cleanToday" value="yes" />
@@ -93,12 +102,12 @@
           <label for="no">No</label>
         </div>
         <div class="field">
-          <h2 class="jft">
+          <h3 class="jft">
             <strong
               ><i>Just for today,</i> I will have faith in someone in NA who
               belives in me and wants to help me in my recovery.</strong
             >
-          </h2>
+          </h3>
 
           <p>Did I talk to my sponsor today?</p>
           <input type="radio" name="talkToSponsor" value="yes" />
@@ -141,12 +150,12 @@
           <input type="text" name="trustMe" />
         </div>
         <div class="field">
-          <h2 class="jft">
+          <h3 class="jft">
             <strong
               ><i>Just for today,</i> I will have a program. I will try to
               follow it to the best of my ability.</strong
             >
-          </h2>
+          </h3>
           <p>Did I read from our literature today?</p>
           <input type="radio" name="read" value="yes" />
           <label for="yes">Yes</label>
@@ -202,12 +211,12 @@
           <label for="no">No</label>
         </div>
         <div class="field">
-          <p class="jft">
+          <h3 class="jft">
             <strong
               ><i>Just for today,</i> through NA, I will try to get a better
               perspective on my life.</strong
             >
-          </p>
+          </h3>
           <p>Did I feel like I was a part of humanity today?</p>
           <input type="radio" name="partOfHumanity" value="yes" />
           <label for="yes">Yes</label>
@@ -275,14 +284,14 @@
           <label for="no">No</label>
         </div>
         <div class="field">
-          <h2 class="jft">
+          <h3 class="jft">
             <strong
               ><i>Just for today,</i> I will be unafraid. My thoughts will be on
               my new associations, people who are not using and have found a new
               way of life. So long as I follow that way, I have nothing to
               fear.</strong
             >
-          </h2>
+          </h3>
 
           <p>
             Have I given of myself today without expecting anything in return?
@@ -335,32 +344,70 @@
           <label for="no">No</label>
         </div>
         <div class="field">
-          <h2>Notes</h2>
+          <h3>Notes</h3>
           <textarea name="notes"></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
-      <div id="entriesContainer"></div>
-      <script src="function.js"></script>
+      <div id="entriesContainer" class="field"></div>
     </div>
+    <div id="about" class="field">
+      <h3>I'm Jim, and I'm an addict</h3>
+      <p>
+        Hi, I'm Jim and thanks to the program of Narcotics Anonymous I've been
+        given an opportunity to leave behind a life in active addiction to
+        mind-altering substances and pursue a much more productive addiction to
+        coding and software development. This site is a personal project that
+        accomplishes two things:</p>
+        <p>1.) Let's me fill out the "Living the Program" IP without all that damn
+        handwriting.<br />
+        2.) Gives me a project to teach myself full stack web development.
+      <p>And
+        while this is a personal project, you are free to use it yourself as
+        long as you are aware of the following:</p>
+      <p>1.) Your data is
+        stored in your browser's 'localstorage' so you can only access your
+        history in the current browser, and that data is NOT encrypted. For now
+        maybe add "just kidding" if you're admitting to some serious crime or
+        something.<br />
+        2.) I plan on improving this site when I have time between a full-time
+        job and college and all the rest of life, so updates might be plenty
+        some times and few at others. Also if you have any suggestions my email
+        is <a href="mailto:jimh.sprh@gmail.com">jimh.sprh@gmail.com</a>, but as
+        welcome as suggestions are, I might not get around to, or even want to
+        implement them, so no hard feelings.
+        <p>Anyways, I hope you enjoy your day!</p>
+      </p>
+      <h3>LEGAL STUFF</h3>
+      <p>
+        This site is provided under the MIT License: <br /><br />Copyright (c)
+        2025 Jim H<br /><br />
+        Permission is hereby granted, free of charge, to any person obtaining a
+        copy of this software and associated documentation files (the
+        "Software"), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:<br /><br />
+        The above copyright notice and this permission notice shall be included
+        in all copies or substantial portions of the Software.<br /><br />
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      </p>
+    </div>
+    <script src="function.js"></script>
   </body>
 
   <footer role="contentinfo" aria-label="Site footer">
-    <div
-      style="
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        align-items: center;
-        justify-content: space-between;
-      "
-    >
+    <div>
       <div>
         <p style="margin: 0 0 0.25rem 0">
-          <strong>Disclaimer:</strong> The "NA" symbol belongs to Narcotics
-          Anonymous.
+          The "NA" symbol belongs to Narcotics Anonymous.
         </p>
         <p style="margin: 0; font-size: 0.85rem; color: #87cefa">
           This site is unofficial and is not affiliated with or endorsed by
@@ -373,7 +420,6 @@
           Site maintained by
           <a
             href="mailto:jimh.sprh@gmail.com"
-            style="color: #87cefa; text-decoration: underline"
             >jimh.sprh@gmail.com</a
           >
         </p>
@@ -386,8 +432,8 @@
     <script>
       // Insert current year automatically
       (function () {
-        var y = new Date().getFullYear();
-        document.getElementById("year").textContent = y;
+        var year = new Date().getFullYear();
+        document.getElementById("year").textContent = year;
       })();
     </script>
   </footer>
